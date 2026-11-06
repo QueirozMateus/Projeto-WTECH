@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços &amp; Soluções | WTECH - Inteligência Artificial, Redes e TI</title>
+    <meta name="description"
+        content="Conheça o portfólio completo de serviços da WTECH: Inteligência Artificial, Infraestrutura de Redes, Gestão de Materiais e Hardware, e Projetos de Tecnologia.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wtech: {
+                            blue: '#0B61AC',
+                            dark: '#084984',
+                            hover: '#095394',
+                            light: '#EAF3FA',
+                            border: '#B9D7F2',
+                            slate: '#0F172A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Corporate Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-slate-50 text-slate-700 antialiased selection:bg-blue-100 selection:text-wtech-blue">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 navbar-clean">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="assets/img/logo-transparent.png" alt="WTECH Tecnologia &amp; IA"
+                    class="h-12 w-auto object-contain group-hover:opacity-90 transition-opacity">
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-2 text-sm font-medium">
+                <a href="index.html" class="nav-clean-link">Início</a>
+                <a href="sobre.html" class="nav-clean-link">Sobre a WTECH</a>
+                <a href="servicos.html" class="nav-clean-link active">Serviços &amp; Soluções</a>
+                <a href="equipe.html" class="nav-clean-link">Nossa Equipe</a>
+                <a href="#simulador" class="nav-clean-link">Simulador</a>
+                <a href="contato.html" class="nav-clean-link">Contato</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center space-x-3">
+                <a href="https://wa.me/5511999999999?text=Olá,%20WTECH!%20Gostaria%20de%20um%20orçamento%20técnico%20de%20serviços."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn-primary inline-flex items-center px-5 py-2.5 text-xs sm:text-sm font-semibold">
+                    <i class="fa-brands fa-whatsapp text-base mr-2"></i>
+                    Solicitar Orçamento
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-700 hover:text-wtech-blue p-2"
+                aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-6 py-5 space-y-3 shadow-lg">
+            <a href="index.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Início</a>
+            <a href="sobre.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Sobre a WTECH</a>
+            <a href="servicos.html" class="block py-2 text-wtech-blue font-semibold border-l-2 border-wtech-blue pl-3">Serviços &amp; Soluções</a>
+            <a href="equipe.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Nossa Equipe</a>
+            <a href="contato.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Contato</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-14 md:pt-40 md:pb-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="badge-blue text-xs font-semibold mb-4">PORTFÓLIO DE ENGENHARIA &amp; IA</span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mt-2">
+                Soluções Tecnológicas para <span class="text-wtech-blue">Empresas de Alto Nível</span>
+            </h1>
+            <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto mt-4 leading-relaxed">
+                Da inteligência artificial aplicada à infraestrutura física de redes e servidores, oferecemos segurança, velocidade e previsibilidade total.
+            </p>
+        </div>
+    </section>
+
+    <!-- DETAILED SERVICES LIST -->
+    <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+            <!-- 1. IA & Automação -->
+            <div id="ia" class="card-clean p-8 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-4">
+                    <span class="badge-clean badge-indigo">
+                        <i class="fa-solid fa-brain mr-1.5"></i>SETOR DE INTELIGÊNCIA ARTIFICIAL
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Inteligência Artificial &amp; Agentes Autônomos</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Liderado por nosso especialista em IA <strong>Mateus Cordeiro Queiroz</strong>, desenvolvemos automações neurais, chatbots corporativos integrados a LLMs e modelos preditivos para otimização de decisões em tempo real.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-600 pt-2">
+                        <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-wtech-blue"></i><span>Modelos preditivos customizados</span></div>
+                        <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-wtech-blue"></i><span>Agentes autônomos e assistentes virtuais</span></div>
+                        <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-wtech-blue"></i><span>Automação inteligente de processos (RPA)</span></div>
+                        <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-wtech-blue"></i><span>Integração de APIs neurais aos sistemas legados</span></div>
+                    </div>
+                    <div class="pt-3">
+                        <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20falar%20sobre%20IA%20com%20a%20WTECH."
+                            target="_blank" class="btn-primary inline-flex items-center px-6 py-3 text-xs font-semibold">
+                            Falar com Especialista em IA <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                        <h4 class="text-slate-900 font-bold text-xs uppercase font-mono text-wtech-blue">Impactos Mensuráveis</h4>
+                        <div class="p-3 bg-white rounded-xl border border-slate-100 text-xs text-slate-600">
+                            <strong class="text-slate-900 block mb-1">Redução de Carga Manual</strong>
+                            Economia de até 70% em rotinas repetitivas através de fluxos automatizados.
+                        </div>
+                        <div class="p-3 bg-white rounded-xl border border-slate-100 text-xs text-slate-600">
+                            <strong class="text-slate-900 block mb-1">Tomada de Decisão com IA</strong>
+                            Classificação e extração de insights valiosos a partir de grandes volumes de dados.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Redes & TI -->
+            <div id="redes" class="card-clean p-8 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-4">
+                    <span class="badge-clean badge-blue">
+                        <i class="fa-solid fa-network-wired mr-1.5"></i>ENGENHARIA DE REDES
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Infraestrutura de Redes &amp; Servidores</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Conduzido pelo especialista em TI <strong>Miguel Figueiredo Ribeiro</strong>, projetamos e executamos redes corporativas estabilizadas, sem perda de pacotes e com segurança perimetral completa.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-600 pt-2">
+                        <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-wtech-blue"></i><span>Cabeamento Cat6/Cat6A &amp; Fibra com certificação</span></div>
+                        <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-wtech-blue"></i><span>Switches gerenciáveis L3, Roteadores e VLANs</span></div>
+                        <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-wtech-blue"></i><span>Wi-Fi corporativo Mesh de alta densidade</span></div>
+                        <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-wtech-blue"></i><span>Organização e fusão técnica de racks de servidor</span></div>
+                    </div>
+                    <div class="pt-3">
+                        <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20uma%20cotação%20para%20Redes%20com%20a%20WTECH."
+                            target="_blank" class="btn-primary inline-flex items-center px-6 py-3 text-xs font-semibold">
+                            Cotação de Infraestrutura <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                        <h4 class="text-slate-900 font-bold text-xs uppercase font-mono text-wtech-blue">Padrão de Execução</h4>
+                        <div class="p-3 bg-white rounded-xl border border-slate-100 text-xs text-slate-600">
+                            <strong class="text-slate-900 block mb-1">Certificação de Pontos</strong>
+                            Cada cabo e conector é rigorosamente testado com relatório oficial de atenuação.
+                        </div>
+                        <div class="p-3 bg-white rounded-xl border border-slate-100 text-xs text-slate-600">
+                            <strong class="text-slate-900 block mb-1">Failover e Redundância</strong>
+                            Garantia de que a empresa nunca fique sem internet em horários de pico.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Gestão de Materiais & Hardware -->
+            <div id="materiais" class="card-clean p-8 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-7 space-y-4">
+                    <span class="badge-clean badge-emerald">
+                        <i class="fa-solid fa-boxes-stacked mr-1.5"></i>GESTÃO DE SUPRIMENTOS
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Materiais, Suprimentos &amp; Hardware Homologado</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Sob a coordenação de nosso Gerente de Materiais <strong>João Vitor Macedo</strong>, homologamos exclusivamente peças originais de marcas líderes, com garantia de fábrica e controle de qualidade prévio em bancada.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-slate-600 pt-2">
+                        <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-wtech-blue"></i><span>Componentes e servidores 100% originais</span></div>
+                        <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-wtech-blue"></i><span>Montagem de Workstations personalizadas</span></div>
+                        <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-wtech-blue"></i><span>Garantia direta com canais oficiais autorizados</span></div>
+                        <div class="flex items-center space-x-2"><i class="fa-solid fa-check text-wtech-blue"></i><span>Testes em bancada e testes de estresse</span></div>
+                    </div>
+                    <div class="pt-3">
+                        <a href="https://wa.me/5511999999999?text=Olá!%20Gostaria%20de%20consultar%20sobre%20Hardware%20na%20WTECH."
+                            target="_blank" class="btn-primary inline-flex items-center px-6 py-3 text-xs font-semibold">
+                            Consultar Hardware Homologado <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                        <h4 class="text-slate-900 font-bold text-xs uppercase font-mono text-wtech-blue">Diferencial de Insumos</h4>
+                        <div class="p-3 bg-white rounded-xl border border-slate-100 text-xs text-slate-600">
+                            <strong class="text-slate-900 block mb-1">Zero Incompatibilidade</strong>
+                            Cada máquina é dimensionada com memória, processador e SSDs balanceados para o uso real.
+                        </div>
+                        <div class="p-3 bg-white rounded-xl border border-slate-100 text-xs text-slate-600">
+                            <strong class="text-slate-900 block mb-1">Sustentação Operacional</strong>
+                            Apoio direto de Caio Miranda nos testes e suporte técnico de campo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-slate-900 text-slate-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <img src="assets/img/logo-transparent.png" alt="WTECH" class="h-8 w-auto brightness-200">
+                <span class="text-xs">&copy; 2026 WTECH. Todos os direitos reservados.</span>
+            </div>
+            <div class="flex items-center space-x-6 text-xs text-slate-300">
+                <a href="index.html" class="hover:text-white">Início</a>
+                <a href="sobre.html" class="hover:text-white">Sobre</a>
+                <a href="servicos.html" class="text-wtech-blue font-semibold">Serviços</a>
+                <a href="equipe.html" class="hover:text-white">Equipe</a>
+                <a href="contato.html" class="hover:text-white">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

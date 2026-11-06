@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <link rel="icon" type="image/png" href="logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WTECH | Soluções em Tecnologia, Inteligência Artificial &amp; Infraestrutura</title>
+    <meta name="description"
+        content="A WTECH é especialista em Inteligência Artificial, Infraestrutura de Redes Corporativas, Gestão de Materiais e Projetos Tecnológicos.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wtech: {
+                            blue: '#0B61AC',
+                            dark: '#084984',
+                            hover: '#095394',
+                            light: '#EAF3FA',
+                            border: '#B9D7F2',
+                            slate: '#0F172A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Corporate Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-slate-50 text-slate-700 antialiased selection:bg-blue-100 selection:text-wtech-blue">
+
+    <!-- ===================================================================== -->
+    <!-- NAVBAR CORPORATIVA LIMPA                                              -->
+    <!-- ===================================================================== -->
+    <header class="fixed top-0 left-0 w-full z-50 navbar-clean">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo Oficial WTECH -->
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="assets/img/logo-transparent.png" alt="WTECH Tecnologia &amp; IA"
+                    class="h-12 w-auto object-contain group-hover:opacity-90 transition-opacity">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-2 text-sm font-medium">
+                <a href="index.html" class="nav-clean-link active">Início</a>
+                <a href="sobre.html" class="nav-clean-link">Sobre a WTECH</a>
+                <a href="servicos.html" class="nav-clean-link">Serviços &amp; Soluções</a>
+                <a href="#equipe" class="nav-clean-link">Nossa Equipe</a>
+                <a href="#simulador" class="nav-clean-link">Simulador</a>
+                <a href="#diferenciais" class="nav-clean-link">Diferenciais</a>
+                <a href="contato.html" class="nav-clean-link">Contato</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center space-x-3">
+                <a href="https://wa.me/5531992230706" target="_blank" rel="noopener noreferrer"
+                    class="btn-primary inline-flex items-center px-5 py-2.5 text-xs sm:text-sm font-semibold">
+                    <i class="fa-brands fa-whatsapp text-base mr-2"></i>
+                    Falar com Especialistas
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-700 hover:text-wtech-blue p-2"
+                aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Container -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-6 py-5 space-y-3 shadow-lg">
+            <a href="index.html"
+                class="block py-2 text-wtech-blue font-semibold border-l-2 border-wtech-blue pl-3">Início</a>
+            <a href="sobre.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Sobre a WTECH</a>
+            <a href="servicos.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Serviços &amp;
+                Soluções</a>
+            <a href="#equipe" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Nossa Equipe</a>
+            <a href="#simulador" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Simulador</a>
+            <a href="contato.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Contato</a>
+            <div class="pt-2">
+                <a href="https://wa.me/5511999999999?text=Olá,%20WTECH!%20Gostaria%20de%20solicitar%20um%20atendimento."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn-primary w-full flex items-center justify-center py-3 text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg mr-2"></i>
+                    Atendimento via WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================================== -->
+    <!-- HERO SECTION (SPLIT CORPORATIVO MODERNO)                              -->
+    <!-- ===================================================================== -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-white border-b border-slate-200/80">
+        <!-- Detalhe sutil de fundo geométrico suave -->
+        <div
+            class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-blue-50/60 via-slate-50/30 to-transparent pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+                <!-- Left Content Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div
+                        class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full badge-blue text-xs font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-wtech-blue"></span>
+                        <span>SOLUÇÕES EM TECNOLOGIA, IA &amp; INFRAESTRUTURA</span>
+                    </div>
+
+                    <h1
+                        class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+                        Inteligência &amp; Engenharia de TI para <span class="text-wtech-blue">Impulsionar
+                            Empresas</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+                        Unimos governança ágil, automação com inteligência artificial, engenharia de redes de alto
+                        desempenho e gestão criteriosa de materiais homologados para entregar estabilidade técnica
+                        absoluta.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+                        <a href="https://wa.me/5511999999999?text=Olá,%20WTECH!%20Gostaria%20de%20agendar%20um%20diagnóstico%20tecnológico."
+                            target="_blank" rel="noopener noreferrer"
+                            class="btn-primary px-7 py-3.5 text-center text-sm font-semibold flex items-center justify-center">
+                            <span>Solicitar Diagnóstico Técnico</span>
+                            <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                        <a href="servicos.html"
+                            class="btn-secondary px-7 py-3.5 text-center text-sm font-semibold flex items-center justify-center">
+                            <i class="fa-solid fa-layer-group mr-2 text-wtech-blue"></i>
+                            <span>Catálogo de Soluções</span>
+                        </a>
+                    </div>
+
+                    <!-- Metrics Badges -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-slate-100 max-w-lg">
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-mono">99.9%</p>
+                            <p class="text-xs text-slate-500 mt-0.5">Uptime e Estabilidade</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-wtech-blue font-mono">+500</p>
+                            <p class="text-xs text-slate-500 mt-0.5">Projetos Executados</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-mono">8</p>
+                            <p class="text-xs text-slate-500 mt-0.5">Especialistas na Squad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Tech Architecture Preview -->
+                <div class="lg:col-span-5">
+                    <div
+                        class="card-clean p-6 sm:p-8 space-y-6 relative overflow-hidden bg-white border border-slate-200">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                                <span class="text-xs font-bold text-slate-700 uppercase tracking-wider font-mono">WTECH
+                                    Cloud &amp; Infra Hub</span>
+                            </div>
+                            <span
+                                class="text-[11px] font-mono text-wtech-blue bg-blue-50 px-2 py-0.5 rounded font-semibold">STATUS:
+                                ATIVO</span>
+                        </div>
+
+                        <!-- System Modules -->
+                        <div class="space-y-3">
+                            <div
+                                class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <div
+                                        class="w-9 h-9 rounded-lg bg-blue-100 text-wtech-blue flex items-center justify-center">
+                                        <i class="fa-solid fa-brain text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-slate-900">Agentes de IA &amp; Automação</h4>
+                                        <p class="text-[11px] text-slate-500">Modelos preditivos e fluxos neurais</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-mono font-bold text-emerald-600">Otimizado</span>
+                            </div>
+
+                            <div
+                                class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <div
+                                        class="w-9 h-9 rounded-lg bg-blue-100 text-wtech-blue flex items-center justify-center">
+                                        <i class="fa-solid fa-network-wired text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-slate-900">Redes &amp; Infraestrutura Cat6A
+                                        </h4>
+                                        <p class="text-[11px] text-slate-500">Wi-Fi 6 corporativo &amp; Racks</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-mono font-bold text-wtech-blue">&lt; 2ms</span>
+                            </div>
+
+                            <div
+                                class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <div
+                                        class="w-9 h-9 rounded-lg bg-blue-100 text-wtech-blue flex items-center justify-center">
+                                        <i class="fa-solid fa-boxes-stacked text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-slate-900">Hardware &amp; Materiais
+                                            Homologados</h4>
+                                        <p class="text-[11px] text-slate-500">Peças originais e workstations</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-mono font-bold text-emerald-600">100% Original</span>
+                            </div>
+
+                            <div
+                                class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-between">
+                                <div class="flex items-center space-x-3">
+                                    <div
+                                        class="w-9 h-9 rounded-lg bg-blue-100 text-wtech-blue flex items-center justify-center">
+                                        <i class="fa-solid fa-shield-halved text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xs font-bold text-slate-900">Segurança &amp; CFTV Digital</h4>
+                                        <p class="text-[11px] text-slate-500">Monitoramento 24/7 com IA</p>
+                                    </div>
+                                </div>
+                                <span class="text-xs font-mono font-bold text-slate-700">Seguro</span>
+                            </div>
+                        </div>
+
+                        <!-- Micro CTA -->
+                        <div class="pt-2">
+                            <a href="#simulador"
+                                class="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-wtech-blue text-xs font-semibold flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-calculator mr-2"></i> Simular Orçamento do Seu Ambiente
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- TRUST STANDARD BAR (CERTIFICAÇÕES E BOAS PRÁTICAS)                    -->
+    <!-- ===================================================================== -->
+    <section class="py-6 bg-slate-100/70 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-xs font-semibold text-slate-600">
+                <div class="flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-check-circle text-wtech-blue text-base"></i>
+                    <span>Cabeamento Estruturado Certificado</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-check-circle text-wtech-blue text-base"></i>
+                    <span>Soluções com IA Nativa</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-check-circle text-wtech-blue text-base"></i>
+                    <span>Metodologias Ágeis (Scrum / Kanban)</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-check-circle text-wtech-blue text-base"></i>
+                    <span>Garantia Oficial de Fabricantes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- SOLUTIONS / SERVICES SECTION (BENTO GRID MODERNO)                     -->
+    <!-- ===================================================================== -->
+    <section id="servicos" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="badge-blue text-xs font-semibold">PORTFÓLIO DE CAPACIDADES</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Soluções Corporativas WTECH</h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Atendemos empresas que necessitam de estabilidade inquestionável, eficiência operacional e evolução
+                    tecnológica contínua.
+                </p>
+            </div>
+
+            <!-- Bento Solutions Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- 1. IA & Automação -->
+                <div class="card-clean p-8 flex flex-col justify-between group">
+                    <div class="space-y-5">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-blue-50 text-wtech-blue flex items-center justify-center text-2xl group-hover:bg-wtech-blue group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-mono font-semibold text-wtech-blue uppercase">Inteligência
+                                Artificial</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Automação com IA &amp; Agentes</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Desenvolvimento de modelos preditivos, agentes inteligentes com LLMs e automação de
+                                fluxos repetitivos para ganhos expressivos de produtividade.
+                            </p>
+                        </div>
+                        <ul class="space-y-2.5 text-xs text-slate-600 pt-2 border-t border-slate-100">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-wtech-blue mr-2"></i> Agentes
+                                cognitivos e assistentes inteligentes</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-wtech-blue mr-2"></i>
+                                Mineração e análise preditiva de dados</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-wtech-blue mr-2"></i>
+                                Integração de IA em sistemas corporativos</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="servicos.html#ia"
+                            class="text-wtech-blue hover:text-wtech-dark font-semibold text-xs inline-flex items-center">
+                            Ver detalhes de IA <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Redes & Servidores -->
+                <div class="card-clean p-8 flex flex-col justify-between group">
+                    <div class="space-y-5">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-blue-50 text-wtech-blue flex items-center justify-center text-2xl group-hover:bg-wtech-blue group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div>
+                            <span
+                                class="text-xs font-mono font-semibold text-wtech-blue uppercase">Infraestrutura</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Redes Corporativas &amp; Racks</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Engenharia de rede de alto rendimento com cabeamento estruturado Cat6/Cat6A, fibra
+                                óptica, Wi-Fi mesh e organização de racks de servidores.
+                            </p>
+                        </div>
+                        <ul class="space-y-2.5 text-xs text-slate-600 pt-2 border-t border-slate-100">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-wtech-blue mr-2"></i>
+                                Certificação de pontos com laudo técnico</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-wtech-blue mr-2"></i>
+                                Roteadores de borda, switches L3 e VLANs</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-wtech-blue mr-2"></i>
+                                Organização e conectorização de racks</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="servicos.html#redes"
+                            class="text-wtech-blue hover:text-wtech-dark font-semibold text-xs inline-flex items-center">
+                            Ver detalhes de Redes <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. Hardware & Materiais -->
+                <div class="card-clean p-8 flex flex-col justify-between group">
+                    <div class="space-y-5">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-blue-50 text-wtech-blue flex items-center justify-center text-2xl group-hover:bg-wtech-blue group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-mono font-semibold text-wtech-blue uppercase">Materiais
+                                Homologados</span>
+                            <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Gestão de Hardware &amp; Peças</h3>
+                            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                                Suprimento de componentes 100% originais, montagem de Workstations de alta potência para
+                                engenharia e manutenção preventiva de hardware.
+                            </p>
+                        </div>
+                        <ul class="space-y-2.5 text-xs text-slate-600 pt-2 border-t border-slate-100">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-wtech-blue mr-2"></i> Peças
+                                homologadas com garantia direta</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-wtech-blue mr-2"></i>
+                                Workstations personalizadas para software pesado</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-wtech-blue mr-2"></i>
+                                Logística ágil de substituição de componentes</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="servicos.html#materiais"
+                            class="text-wtech-blue hover:text-wtech-dark font-semibold text-xs inline-flex items-center">
+                            Ver detalhes de Materiais <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Botão Ver Todos os Serviços -->
+            <div class="text-center mt-12">
+                <a href="servicos.html" class="btn-secondary px-8 py-3 text-sm inline-flex items-center">
+                    <span>Acessar todos os 6 setores de serviços da WTECH</span>
+                    <i class="fa-solid fa-arrow-right-long ml-2 text-wtech-blue"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- CALCULADORA / SIMULADOR (REDESIGN CORPORATIVO NEUTRO)                  -->
+    <!-- ===================================================================== -->
+    <section id="simulador" class="py-20 bg-white border-y border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="card-clean p-6 sm:p-10 border border-slate-200">
+
+                <div class="text-center space-y-3 mb-10">
+                    <span class="badge-blue text-xs font-semibold">SIMULADOR EXPRESSO</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Calculadora Inteligente de Projetos
+                    </h2>
+                    <p class="text-slate-600 text-xs sm:text-sm max-w-xl mx-auto">
+                        Simule uma estimativa de investimento para o escopo da sua empresa e envie direto para a equipe
+                        técnica da WTECH.
+                    </p>
+                </div>
+
+                <form id="calc-form" class="space-y-8" onsubmit="event.preventDefault();">
+
+                    <!-- Step 1: Select Service -->
+                    <div class="space-y-3">
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide">1. Escolha a
+                            solução desejada:</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="calc-service" value="IA e Automação de Processos"
+                                    class="peer hidden" checked onchange="updateCalculator()">
+                                <div
+                                    class="p-4 rounded-xl border border-slate-200 bg-slate-50 text-center peer-checked:border-wtech-blue peer-checked:bg-blue-50/70 peer-checked:text-wtech-blue transition-all">
+                                    <i class="fa-solid fa-brain text-xl mb-2 block text-wtech-blue"></i>
+                                    <span class="text-xs font-bold">IA &amp; Automação</span>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="calc-service" value="Redes e Infraestrutura TI"
+                                    class="peer hidden" onchange="updateCalculator()">
+                                <div
+                                    class="p-4 rounded-xl border border-slate-200 bg-slate-50 text-center peer-checked:border-wtech-blue peer-checked:bg-blue-50/70 peer-checked:text-wtech-blue transition-all">
+                                    <i class="fa-solid fa-network-wired text-xl mb-2 block text-wtech-blue"></i>
+                                    <span class="text-xs font-bold">Redes &amp; Infraestrutura</span>
+                                </div>
+                            </label>
+
+                            <label class="cursor-pointer">
+                                <input type="radio" name="calc-service" value="Hardware & Manutenção Especializada"
+                                    class="peer hidden" onchange="updateCalculator()">
+                                <div
+                                    class="p-4 rounded-xl border border-slate-200 bg-slate-50 text-center peer-checked:border-wtech-blue peer-checked:bg-blue-50/70 peer-checked:text-wtech-blue transition-all">
+                                    <i class="fa-solid fa-desktop text-xl mb-2 block text-wtech-blue"></i>
+                                    <span class="text-xs font-bold">Hardware &amp; Materiais</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Location Type -->
+                    <div class="space-y-3">
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide">2. Tipo de
+                            ambiente:</label>
+                        <div class="grid grid-cols-3 gap-3">
+                            <label class="cursor-pointer">
+                                <input type="radio" name="calc-location" value="Comercial/Corporativo"
+                                    class="peer hidden" checked onchange="updateCalculator()">
+                                <div
+                                    class="p-3 rounded-xl border border-slate-200 bg-slate-50 text-center peer-checked:border-wtech-blue peer-checked:bg-blue-50/70 peer-checked:text-wtech-blue font-semibold transition-all text-xs">
+                                    Corporativo
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="calc-location" value="Residencial" class="peer hidden"
+                                    onchange="updateCalculator()">
+                                <div
+                                    class="p-3 rounded-xl border border-slate-200 bg-slate-50 text-center peer-checked:border-wtech-blue peer-checked:bg-blue-50/70 peer-checked:text-wtech-blue font-semibold transition-all text-xs">
+                                    Residencial
+                                </div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input type="radio" name="calc-location" value="Galpão/Industrial" class="peer hidden"
+                                    onchange="updateCalculator()">
+                                <div
+                                    class="p-3 rounded-xl border border-slate-200 bg-slate-50 text-center peer-checked:border-wtech-blue peer-checked:bg-blue-50/70 peer-checked:text-wtech-blue font-semibold transition-all text-xs">
+                                    Industrial
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Quantity Slider -->
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <label id="calc-qty-label"
+                                class="text-xs font-bold text-slate-700 uppercase tracking-wide">3. Quantidade Estimada
+                                (Fluxos / Processos):</label>
+                            <span id="calc-qty-val"
+                                class="font-mono text-base font-bold text-wtech-blue bg-blue-50 px-3 py-1 rounded-lg border border-blue-200">4</span>
+                        </div>
+                        <input type="range" id="calc-qty" min="1" max="24" value="4"
+                            class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#0B61AC]"
+                            oninput="updateCalculator()">
+                        <div class="flex justify-between text-[11px] text-slate-400 font-mono">
+                            <span>1 unidade</span>
+                            <span>12 unidades</span>
+                            <span>24+ unidades</span>
+                        </div>
+                    </div>
+
+                    <!-- Calculator Summary Display -->
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3">
+                        <div
+                            class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-3">
+                            <span class="text-xs text-slate-500 uppercase font-mono font-semibold">Estimativa de
+                                Investimento WTECH:</span>
+                            <span id="calc-price-range"
+                                class="text-2xl sm:text-3xl font-extrabold text-wtech-blue font-mono">R$ 2.070 - R$
+                                4.370</span>
+                        </div>
+                        <p class="text-xs text-slate-500">
+                            *Valores referenciais. Cada escopo é minuciosamente validado pela nossa liderança técnica
+                            para garantir a melhor eficiência de investimento.
+                        </p>
+                    </div>
+
+                    <!-- Submit WhatsApp Action -->
+                    <button type="button" onclick="sendCalculatorWhatsApp()"
+                        class="btn-primary w-full py-4 text-sm font-bold flex items-center justify-center space-x-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Enviar Simulação do Projeto via WhatsApp</span>
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- METODOLOGIA DE TRABALHO (4 ETAPAS)                                    -->
+    <!-- ===================================================================== -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="badge-blue text-xs font-semibold">COMO TRABALHAMOS</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Metodologia Ágil e Transparente</h2>
+                <p class="text-slate-600 text-sm">Garantia de previsibilidade, cumprimento de prazos e excelência
+                    técnica em cada etapa.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card-clean p-6 space-y-3">
+                    <span class="text-2xl font-mono font-extrabold text-wtech-blue">01</span>
+                    <h4 class="text-base font-bold text-slate-900">Imersão &amp; Diagnóstico</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Mapeamos as dores da sua infraestrutura e os fluxos de trabalho que podem ser potencializados
+                        por IA.
+                    </p>
+                </div>
+
+                <div class="card-clean p-6 space-y-3">
+                    <span class="text-2xl font-mono font-extrabold text-wtech-blue">02</span>
+                    <h4 class="text-base font-bold text-slate-900">Arquitetura &amp; Peças</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Especificação técnica detalhada, seleção de materiais homologados e desenho da arquitetura de
+                        rede/IA.
+                    </p>
+                </div>
+
+                <div class="card-clean p-6 space-y-3">
+                    <span class="text-2xl font-mono font-extrabold text-wtech-blue">03</span>
+                    <h4 class="text-base font-bold text-slate-900">Execução em Sprints</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Implementação ágil sob a governança de projetos da WTECH, com testes rigorosos antes da entrega.
+                    </p>
+                </div>
+
+                <div class="card-clean p-6 space-y-3">
+                    <span class="text-2xl font-mono font-extrabold text-wtech-blue">04</span>
+                    <h4 class="text-base font-bold text-slate-900">Sustentação Contínua</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Suporte ativo, monitoramento preventivo e evolução contínua dos sistemas e da infraestrutura da
+                        sua empresa.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ===================================================================== -->
+    <!-- DIFERENCIAIS COMPETITIVOS                                             -->
+    <!-- ===================================================================== -->
+    <section id="diferenciais" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="badge-blue text-xs font-semibold">POR QUE A WTECH</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Diferenciais que Geram Confiança</h2>
+                <p class="text-slate-600 text-sm">Garantimos estabilidade técnica, previsibilidade e atendimento
+                    próximo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card-clean p-6 space-y-3">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-50 text-wtech-blue flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <h3 class="font-bold text-base text-slate-900">Liderança Estratégica</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Foco em resolver problemas reais e alinhar a tecnologia diretamente às metas do seu negócio.
+                    </p>
+                </div>
+
+                <div class="card-clean p-6 space-y-3">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-50 text-wtech-blue flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="font-bold text-base text-slate-900">IA de Alto Impacto</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Implementação prática de IA para poupar horas de trabalho operacional e automatizar análises.
+                    </p>
+                </div>
+
+                <div class="card-clean p-6 space-y-3">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-50 text-wtech-blue flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-shield-check"></i>
+                    </div>
+                    <h3 class="font-bold text-base text-slate-900">Redes Blindadas</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Infraestrutura estável, livre de gargalos e preparada para o crescimento da sua empresa.
+                    </p>
+                </div>
+
+                <div class="card-clean p-6 space-y-3">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-50 text-wtech-blue flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3 class="font-bold text-base text-slate-900">Peças Homologadas</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Componentes 100% originais com garantia formal de fabricante e homologação técnica em bancada.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- FAQ ACCORDION                                                         -->
+    <!-- ===================================================================== -->
+    <section id="faq" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <span class="badge-blue text-xs font-semibold">DÚVIDAS FREQUENTES</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Perguntas &amp; Respostas</h2>
+                <p class="text-slate-600 text-sm">Respostas objetivas sobre os modelos de trabalho da WTECH.</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="card-clean overflow-hidden">
+                    <button class="w-full p-6 text-left flex justify-between items-center focus:outline-none"
+                        onclick="toggleFaq(this)">
+                        <span class="font-semibold text-slate-900 text-sm sm:text-base">Como a WTECH implementa
+                            Inteligência Artificial nas empresas?</span>
+                        <i class="fa-solid fa-chevron-down text-wtech-blue transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        Nossa equipe especializada avalia a rotina da sua empresa para mapear gargalos. Em seguida,
+                        implementamos automações neurais, agentes inteligentes e análise de dados sob medida para
+                        amplificar a produtividade do seu time.
+                    </div>
+                </div>
+
+                <div class="card-clean overflow-hidden">
+                    <button class="w-full p-6 text-left flex justify-between items-center focus:outline-none"
+                        onclick="toggleFaq(this)">
+                        <span class="font-semibold text-slate-900 text-sm sm:text-base">Vocês realizam projetos de
+                            infraestrutura completa de TI?</span>
+                        <i class="fa-solid fa-chevron-down text-wtech-blue transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        Sim! Cuidamos de todo o ciclo: cabeamento estruturado, organização de racks de servidores, Wi-Fi
+                        mesh de alta densidade, segurança perimetral (firewall) e montagem de workstations com peças
+                        homologadas pelo nosso setor de materiais.
+                    </div>
+                </div>
+
+                <div class="card-clean overflow-hidden">
+                    <button class="w-full p-6 text-left flex justify-between items-center focus:outline-none"
+                        onclick="toggleFaq(this)">
+                        <span class="font-semibold text-slate-900 text-sm sm:text-base">Como funciona a governança e o
+                            acompanhamento dos projetos?</span>
+                        <i class="fa-solid fa-chevron-down text-wtech-blue transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        Adotamos metodologias ágeis (Scrum e Kanban) lideradas pelo nosso Gerente de Projetos Bernardo
+                        Garajau. O cliente tem transparência total por meio de alinhamentos periódicos de sprint,
+                        garantindo cumprimento de prazos e orçamentos.
+                    </div>
+                </div>
+
+                <div class="card-clean overflow-hidden">
+                    <button class="w-full p-6 text-left flex justify-between items-center focus:outline-none"
+                        onclick="toggleFaq(this)">
+                        <span class="font-semibold text-slate-900 text-sm sm:text-base">Como solicitar um orçamento ou
+                            proposta técnica?</span>
+                        <i class="fa-solid fa-chevron-down text-wtech-blue transition-transform duration-300"></i>
+                    </button>
+                    <div
+                        class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                        Você pode utilizar nossa calculadora interativa acima para obter uma prévia ou falar diretamente
+                        com nossos especialistas via WhatsApp ou formulário. Retornamos rapidamente para alinhar os
+                        detalhes técnicos.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ===================================================================== -->
+    <!-- SEÇÃO DA EQUIPE WTECH (REDESIGN EDITORIAL CORPORATIVO LIMPO)          -->
+    <!-- ===================================================================== -->
+    <section id="equipe" class="py-24 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="badge-blue text-xs font-semibold">NOSSO CORPO TÉCNICO</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Quem Faz a WTECH Acontecer</h2>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                    Conheça a squad multidisciplinar responsável por liderar, projetar, desenvolver e sustentar cada
+                    solução técnica da WTECH.
+                </p>
+            </div>
+
+            <!-- Team Grid: All 8 Collaborators -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
+
+                <!-- 1. Hugo Silva Rocha - Líder -->
+                <div class="team-card-clean p-5 flex flex-col justify-between">
+                    <div>
+                        <!-- Espaço reservado para a foto -->
+                        <div class="photo-slot mb-4">
+                            <img src="assets/img/team/hugo-silva-rocha.jpg" alt="Hugo Silva Rocha - Líder WTECH"
+                                class="img-focus-face" loading="lazy">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-check text-[10px] text-wtech-blue"></i> WTECH
+                            </span>
+                        </div>
+
+                        <!-- Informações do Colaborador -->
+                        <div class="space-y-2 text-center">
+                            <span class="badge-clean badge-amber">
+                                <i class="fa-solid fa-crown text-[10px] mr-1.5"></i>Líder
+                            </span>
+                            <h3 class="text-lg font-bold text-slate-900">
+                                Hugo Silva Rocha
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Liderança executiva, visão estratégica de negócios e coordenação geral da WTECH.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Contatos -->
+                    <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-center space-x-2">
+                        <a href="https://wa.me/55319975041098?text=Olá,%20gostaria%20de%20falar%20com%20Hugo%20Silva%20Rocha%20(Líder%20WTECH)."
+                            target="_blank" rel="noopener noreferrer" class="social-clean-btn"
+                            title="Falar via WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+                        </a>
+                        <a href="huggosroc@gmail.com.br?subject=Contato%20com%20Hugo%20Silva%20Rocha"
+                            class="social-clean-btn" title="Enviar E-mail">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/hugosilva" target="_blank" rel="noopener noreferrer"
+                            class="social-clean-btn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-blue-600"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Júlia Cordeiro Periard - Gerente Administrativo -->
+                <div class="team-card-clean p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="photo-slot mb-4">
+                            <img src="juh.jpeg" alt="Júlia Cordeiro Periard - Gerente Administrativo WTECH"
+                                loading="lazy">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-camera text-[10px] text-wtech-blue"></i> Foto
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 text-center">
+                            <span class="badge-clean badge-emerald">
+                                <i class="fa-solid fa-briefcase text-[10px] mr-1.5"></i>Gerente Administrativo
+                            </span>
+                            <h3 class="text-lg font-bold text-slate-900">
+                                Júlia Cordeiro Periard
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Gestão administrativa, controle financeiro, planejamento operacional e governança.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-center space-x-2">
+                        <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20falar%20com%20Júlia%20Cordeiro%20Periard."
+                            target="_blank" rel="noopener noreferrer" class="social-clean-btn"
+                            title="Falar via WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+                        </a>
+                        <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20Júlia%20Cordeiro%20Periard"
+                            class="social-clean-btn" title="Enviar E-mail">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                            class="social-clean-btn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-blue-600"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. Matheus Filipe Salomé - Gerente de Comunicações -->
+                <div class="team-card-clean p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="photo-slot mb-4">
+                            <img src="salome.jpg" alt="Matheus Filipe Salomé - Gerente de Comunicações WTECH"
+                                loading="lazy">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-camera text-[10px] text-wtech-blue"></i> Foto
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 text-center">
+                            <span class="badge-clean badge-blue">
+                                <i class="fa-solid fa-bullhorn text-[10px] mr-1.5"></i>Gerente de Comunicações
+                            </span>
+                            <h3 class="text-lg font-bold text-slate-900">
+                                Matheus Filipe Salomé
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Comunicação institucional, relações com clientes, posicionamento da marca WTECH e
+                                marketing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-center space-x-2">
+                        <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20falar%20com%20Matheus%20Filipe%20Salomé."
+                            target="_blank" rel="noopener noreferrer" class="social-clean-btn"
+                            title="Falar via WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+                        </a>
+                        <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20Matheus%20Filipe%20Salomé"
+                            class="social-clean-btn" title="Enviar E-mail">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                            class="social-clean-btn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-blue-600"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Mateus Cordeiro Queiroz - IA -->
+                <div class="team-card-clean p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="photo-slot mb-4">
+                            <img src="assets/img/team/mateus-cordeiro-queiroz.jpg"
+                                alt="Mateus Cordeiro Queiroz - IA WTECH" class="img-focus-face" loading="lazy">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-check text-[10px] text-wtech-blue"></i> WTECH
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 text-center">
+                            <span class="badge-clean badge-indigo">
+                                <i class="fa-solid fa-brain text-[10px] mr-1.5"></i>IA
+                            </span>
+                            <h3 class="text-lg font-bold text-slate-900">
+                                Mateus Cordeiro Queiroz
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Especialista em Inteligência Artificial, modelos neurais, machine learning e agentes
+                                autônomos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-center space-x-2">
+                        <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20falar%20com%20Mateus%20Cordeiro%20Queiroz%20(IA)."
+                            target="_blank" rel="noopener noreferrer" class="social-clean-btn"
+                            title="Falar via WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+                        </a>
+                        <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20Mateus%20Cordeiro%20Queiroz"
+                            class="social-clean-btn" title="Enviar E-mail">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                            class="social-clean-btn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-blue-600"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. Miguel Figueiredo Ribeiro - TI -->
+                <div class="team-card-clean p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="photo-slot mb-4">
+                            <img src="big.jpeg" alt="Miguel Figueiredo Ribeiro - TI WTECH" loading="lazy">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-camera text-[10px] text-wtech-blue"></i> Foto
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 text-center">
+                            <span class="badge-clean badge-blue">
+                                <i class="fa-solid fa-terminal text-[10px] mr-1.5"></i>TI
+                            </span>
+                            <h3 class="text-lg font-bold text-slate-900">
+                                Miguel Figueiredo Ribeiro
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Especialista em Tecnologia da Informação, redes corporativas, servidores e
+                                cibersegurança.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-center space-x-2">
+                        <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20falar%20com%20Miguel%20Figueiredo%20Ribeiro%20(TI)."
+                            target="_blank" rel="noopener noreferrer" class="social-clean-btn"
+                            title="Falar via WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+                        </a>
+                        <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20Miguel%20Figueiredo%20Ribeiro"
+                            class="social-clean-btn" title="Enviar E-mail">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                            class="social-clean-btn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-blue-600"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. João Vitor Macedo - Gerente de Materiais -->
+                <div class="team-card-clean p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="photo-slot mb-4">
+                            <img src="assets/img/team/joao-vitor-macedo.jpg"
+                                alt="João Vitor Macedo - Gerente de Materiais WTECH" class="img-focus-face"
+                                loading="lazy">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-check text-[10px] text-wtech-blue"></i> WTECH
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 text-center">
+                            <span class="badge-clean badge-blue">
+                                <i class="fa-solid fa-boxes-stacked text-[10px] mr-1.5"></i>Gerente de Materiais
+                            </span>
+                            <h3 class="text-lg font-bold text-slate-900">
+                                João Vitor Macedo
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Suprimento de componentes, homologação técnica de hardware e logística de peças
+                                originais.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-center space-x-2">
+                        <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20falar%20com%20João%20Vitor%20Macedo."
+                            target="_blank" rel="noopener noreferrer" class="social-clean-btn"
+                            title="Falar via WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+                        </a>
+                        <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20João%20Vitor%20Macedo"
+                            class="social-clean-btn" title="Enviar E-mail">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                            class="social-clean-btn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-blue-600"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 7. Bernardo Silva Garajau - Gerente de Projetos -->
+                <div class="team-card-clean p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="photo-slot mb-4">
+                            <img src="assets/img/team/bernardo-silva-garajau.jpg"
+                                alt="Bernardo Silva Garajau - Gerente de Projetos WTECH" class="img-focus-face"
+                                loading="lazy">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-check text-[10px] text-wtech-blue"></i> WTECH
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 text-center">
+                            <span class="badge-clean badge-emerald">
+                                <i class="fa-solid fa-diagram-project text-[10px] mr-1.5"></i>Gerente de Projetos
+                            </span>
+                            <h3 class="text-lg font-bold text-slate-900">
+                                Bernardo Silva Garajau
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Gestão ágil de projetos, cumprimento rigoroso de prazos, entregas de valor e governança
+                                de escopo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-center space-x-2">
+                        <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20falar%20com%20Bernardo%20Silva%20Garajau."
+                            target="_blank" rel="noopener noreferrer" class="social-clean-btn"
+                            title="Falar via WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+                        </a>
+                        <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20Bernardo%20Silva%20Garajau"
+                            class="social-clean-btn" title="Enviar E-mail">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                            class="social-clean-btn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-blue-600"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 8. Caio Matos Miranda - Colaborador -->
+                <div class="team-card-clean p-5 flex flex-col justify-between">
+                    <div>
+                        <div class="photo-slot mb-4">
+                            <img src="assets/img/team/caio-matos-miranda.jpg"
+                                alt="Caio Matos Miranda - Colaborador WTECH" class="img-focus-top" loading="lazy">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-check text-[10px] text-wtech-blue"></i> WTECH
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 text-center">
+                            <span class="badge-clean badge-blue">
+                                <i class="fa-solid fa-user-gear text-[10px] mr-1.5"></i>Colaborador
+                            </span>
+                            <h3 class="text-lg font-bold text-slate-900">
+                                Caio Matos Miranda
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Suporte operacional, execução técnica em bancada e campo, testes de equipamentos e
+                                sustentação.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-center space-x-2">
+                        <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20falar%20com%20Caio%20Matos%20Miranda."
+                            target="_blank" rel="noopener noreferrer" class="social-clean-btn"
+                            title="Falar via WhatsApp">
+                            <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+                        </a>
+                        <a href="m@gmail.com?subject=Contato%20com%20Caio%20Matos%20Miranda" class="social-clean-btn"
+                            title="Enviar E-mail">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                            class="social-clean-btn" title="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in text-blue-600"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Link para Página da Equipe Completa -->
+            <div class="text-center mt-12">
+                <a href="equipe.html" class="btn-secondary px-8 py-3.5 text-sm font-semibold inline-flex items-center">
+                    <i class="fa-solid fa-users mr-2 text-wtech-blue"></i>
+                    Ver página detalhada da equipe com competências técnicas completas
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <!-- ===================================================================== -->
+    <!-- CONTATO DIRETO                                                        -->
+    <!-- ===================================================================== -->
+    <section id="contato" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+                <!-- Left Column Info -->
+                <div class="space-y-8">
+                    <div class="space-y-3">
+                        <span class="badge-blue text-xs font-semibold">FALE CONOSCO</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Inicie Seu Projeto com a WTECH
+                        </h2>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Nossa liderança e equipe técnica estão prontas para entender suas necessidades e estruturar
+                            um plano de ação preciso.
+                        </p>
+                    </div>
+
+                    <div class="space-y-5">
+                        <div class="card-clean p-5 flex items-start space-x-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-blue-50 text-wtech-blue flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Atendimento &amp; WhatsApp</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">(11) 99999-9999 &bull; Central Oficial</p>
+                            </div>
+                        </div>
+
+                        <div class="card-clean p-5 flex items-start space-x-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-blue-50 text-wtech-blue flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">E-mail Institucional</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">contato@wtech.com.br</p>
+                            </div>
+                        </div>
+
+                        <div class="card-clean p-5 flex items-start space-x-4">
+                            <div
+                                class="w-11 h-11 rounded-xl bg-blue-50 text-wtech-blue flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-slate-900">Área de Atuação</h4>
+                                <p class="text-xs text-slate-600 mt-0.5">Atendimento Presencial para Projetos e
+                                    Consultoria Remota Brasil</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column Form -->
+                <div class="card-clean p-8 sm:p-10 border border-slate-200">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6">Envie uma Mensagem para a Equipe</h3>
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-2">Seu Nome / Empresa
+                                *</label>
+                            <input type="text" id="contact-name" required
+                                placeholder="Ex: Roberto Ramos - Tech Solutions"
+                                class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-wtech-blue text-sm">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-2">E-mail *</label>
+                                <input type="email" id="contact-email" required placeholder="roberto@empresa.com"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-wtech-blue text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-2">WhatsApp *</label>
+                                <input type="tel" id="contact-phone" required placeholder="(11) 99999-9999"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-wtech-blue text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-2">Área de
+                                Interesse</label>
+                            <input type="text" id="contact-subject"
+                                placeholder="Ex: Consultoria em IA / Redes Corporativas"
+                                class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-wtech-blue text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-2">Mensagem *</label>
+                            <textarea id="contact-msg" rows="4" required
+                                placeholder="Conte-nos brevemente sobre a sua demanda..."
+                                class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-wtech-blue text-sm"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="btn-primary w-full py-4 text-sm font-bold flex items-center justify-center">
+                            <i class="fa-paper-plane fa-solid mr-2"></i> Transmitir Mensagem via WhatsApp
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- FOOTER CORPORATIVO SLATE-900                                          -->
+    <!-- ===================================================================== -->
+    <footer class="py-12 bg-slate-900 text-slate-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center space-x-3">
+                    <img src="assets/img/logo-transparent.png" alt="WTECH" class="h-8 w-auto brightness-200">
+                    <span class="text-xs text-slate-400">&copy; 2026 WTECH Soluções em Tecnologia &amp; IA.</span>
+                </div>
+                <div class="flex items-center space-x-6 text-xs text-slate-300">
+                    <a href="index.html" class="hover:text-white transition-colors">Início</a>
+                    <a href="sobre.html" class="hover:text-white transition-colors">Sobre</a>
+                    <a href="servicos.html" class="hover:text-white transition-colors">Serviços</a>
+                    <a href="equipe.html" class="hover:text-white transition-colors">Equipe</a>
+                    <a href="contato.html" class="hover:text-white transition-colors">Contato</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/5511999999999?text=Olá,%20WTECH!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20atendimento."
+        target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-emerald-500 text-white flex items-center justify-center text-2xl shadow-xl whatsapp-float-btn hover:scale-110 transition-transform"
+        aria-label="Atendimento via WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- EXTERNAL JAVASCRIPT FILES -->
+    <script src="assets/js/calculator.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

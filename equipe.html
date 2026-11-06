@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Equipe | WTECH - Conheça Nossos Especialistas</title>
+    <meta name="description"
+        content="Conheça a equipe da WTECH: especialistas em liderança, inteligência artificial, redes de computadores, gestão de materiais e projetos tecnológicos.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wtech: {
+                            blue: '#0B61AC',
+                            dark: '#084984',
+                            hover: '#095394',
+                            light: '#EAF3FA',
+                            border: '#B9D7F2',
+                            slate: '#0F172A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Corporate Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-slate-50 text-slate-700 antialiased selection:bg-blue-100 selection:text-wtech-blue">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 navbar-clean">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="assets/img/logo-transparent.png" alt="WTECH Tecnologia &amp; IA"
+                    class="h-12 w-auto object-contain group-hover:opacity-90 transition-opacity">
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-2 text-sm font-medium">
+                <a href="index.html" class="nav-clean-link">Início</a>
+                <a href="sobre.html" class="nav-clean-link">Sobre a WTECH</a>
+                <a href="servicos.html" class="nav-clean-link">Serviços &amp; Soluções</a>
+                <a href="equipe.html" class="nav-clean-link active">Nossa Equipe</a>
+                <a href="index.html#simulador" class="nav-clean-link">Simulador</a>
+                <a href="contato.html" class="nav-clean-link">Contato</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center space-x-3">
+                <a href="https://wa.me/5511999999999?text=Olá,%20WTECH!%20Gostaria%20de%20falar%20com%20um%20especialista%20da%20equipe."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn-primary inline-flex items-center px-5 py-2.5 text-xs sm:text-sm font-semibold">
+                    <i class="fa-brands fa-whatsapp text-base mr-2"></i>
+                    Falar com a Equipe
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-700 hover:text-wtech-blue p-2"
+                aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-6 py-5 space-y-3 shadow-lg">
+            <a href="index.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Início</a>
+            <a href="sobre.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Sobre a WTECH</a>
+            <a href="servicos.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Serviços &amp; Soluções</a>
+            <a href="equipe.html" class="block py-2 text-wtech-blue font-semibold border-l-2 border-wtech-blue pl-3">Nossa Equipe</a>
+            <a href="contato.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Contato</a>
+        </div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="relative pt-32 pb-14 md:pt-40 md:pb-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="badge-blue text-xs font-semibold mb-4">CORPO TÉCNICO &amp; EXECUTIVO WTECH</span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mt-2">
+                Especialistas que Fazem a <span class="text-wtech-blue">WTECH Acontecer</span>
+            </h1>
+            <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto mt-4 leading-relaxed">
+                Conheça em detalhes cada membro da equipe WTECH, suas competências técnicas, cargos e áreas de responsabilidade.
+            </p>
+
+            <!-- Department Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2.5 mt-8">
+                <button data-filter="all"
+                    class="team-filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm transition-all btn-primary shadow-sm">
+                    Todos os Membros (8)
+                </button>
+                <button data-filter="leadership"
+                    class="team-filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm transition-all btn-secondary text-slate-600">
+                    Liderança &amp; Projetos
+                </button>
+                <button data-filter="tech"
+                    class="team-filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm transition-all btn-secondary text-slate-600">
+                    Inteligência Artificial &amp; TI
+                </button>
+                <button data-filter="management"
+                    class="team-filter-btn px-5 py-2.5 rounded-xl text-xs sm:text-sm transition-all btn-secondary text-slate-600">
+                    Gestão &amp; Comunicação
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- DETAILED TEAM GRID -->
+    <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+                <!-- 1. Hugo Silva Rocha - Líder -->
+                <div class="team-member-item team-card-clean p-6 flex flex-col justify-between" data-category="leadership">
+                    <div>
+                        <div class="photo-slot mb-5">
+                            <img src="assets/img/team/hugo-silva-rocha.jpg" alt="Hugo Silva Rocha - Líder WTECH" class="img-focus-face">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-check text-[10px] text-wtech-blue"></i> WTECH
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center justify-between">
+                                <span class="badge-clean badge-amber">
+                                    <i class="fa-solid fa-crown text-[10px] mr-1.5"></i>Líder
+                                </span>
+                                <span class="text-[11px] font-mono text-slate-400">#01 Executivo</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">
+                                Hugo Silva Rocha
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Liderança executiva da WTECH, direcionamento dos objetivos estratégicos da empresa, alinhamento de metas e tomada de decisões.
+                            </p>
+                        </div>
+
+                        <div class="pt-2">
+                            <p class="text-[10px] uppercase font-mono tracking-wider text-slate-400 mb-2">Especialidades:</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Liderança Estratégica</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Visão Tech</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-[11px] text-slate-400 font-mono">WTECH Squad</span>
+                        <div class="flex space-x-2">
+                            <a href="https://wa.me/5511999999999?text=Olá,%20Hugo%20Silva%20Rocha!%20Vim%20pelo%20site%20da%20WTECH."
+                                target="_blank" class="social-clean-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp text-emerald-600"></i></a>
+                            <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20Hugo%20Silva%20Rocha" class="social-clean-btn"
+                                title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Júlia Cordeiro Periard - Gerente Administrativo -->
+                <div class="team-member-item team-card-clean p-6 flex flex-col justify-between" data-category="management">
+                    <div>
+                        <div class="photo-slot mb-5">
+                            <img src="assets/img/team/julia-cordeiro-periard.svg"
+                                alt="Júlia Cordeiro Periard - Gerente Administrativo WTECH">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-camera text-[10px] text-wtech-blue"></i> Foto
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center justify-between">
+                                <span class="badge-clean badge-emerald">
+                                    <i class="fa-solid fa-briefcase text-[10px] mr-1.5"></i>Gerente Administrativo
+                                </span>
+                                <span class="text-[11px] font-mono text-slate-400">#02 Gestão</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">
+                                Júlia Cordeiro Periard
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Planejamento administrativo, organização de fluxos operacionais, governança corporativa e sustentabilidade financeira.
+                            </p>
+                        </div>
+
+                        <div class="pt-2">
+                            <p class="text-[10px] uppercase font-mono tracking-wider text-slate-400 mb-2">Especialidades:</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Administração</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Compliance</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-[11px] text-slate-400 font-mono">WTECH Squad</span>
+                        <div class="flex space-x-2">
+                            <a href="https://wa.me/5511999999999?text=Olá,%20Júlia%20Cordeiro%20Periard!%20Vim%20pelo%20site%20da%20WTECH."
+                                target="_blank" class="social-clean-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp text-emerald-600"></i></a>
+                            <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20Júlia%20Cordeiro%20Periard"
+                                class="social-clean-btn" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Matheus Filipe Salomé - Gerente de Comunicações -->
+                <div class="team-member-item team-card-clean p-6 flex flex-col justify-between" data-category="management">
+                    <div>
+                        <div class="photo-slot mb-5">
+                            <img src="assets/img/team/matheus-filipe-salome.svg"
+                                alt="Matheus Filipe Salomé - Gerente de Comunicações WTECH">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-camera text-[10px] text-wtech-blue"></i> Foto
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center justify-between">
+                                <span class="badge-clean badge-blue">
+                                    <i class="fa-solid fa-bullhorn text-[10px] mr-1.5"></i>Gerente de Comunicações
+                                </span>
+                                <span class="text-[11px] font-mono text-slate-400">#03 Comunicação</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">
+                                Matheus Filipe Salomé
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Comunicação estratégica, canais de relacionamento com clientes, imagem institucional da WTECH e marketing corporativo.
+                            </p>
+                        </div>
+
+                        <div class="pt-2">
+                            <p class="text-[10px] uppercase font-mono tracking-wider text-slate-400 mb-2">Especialidades:</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Comunicação</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Relações Públicas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-[11px] text-slate-400 font-mono">WTECH Squad</span>
+                        <div class="flex space-x-2">
+                            <a href="https://wa.me/5511999999999?text=Olá,%20Matheus%20Filipe%20Salomé!%20Vim%20pelo%20site%20da%20WTECH."
+                                target="_blank" class="social-clean-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp text-emerald-600"></i></a>
+                            <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20Matheus%20Filipe%20Salomé"
+                                class="social-clean-btn" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Mateus Cordeiro Queiroz - IA -->
+                <div class="team-member-item team-card-clean p-6 flex flex-col justify-between" data-category="tech">
+                    <div>
+                        <div class="photo-slot mb-5">
+                            <img src="assets/img/team/mateus-cordeiro-queiroz.jpg"
+                                alt="Mateus Cordeiro Queiroz - IA WTECH" class="img-focus-face">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-check text-[10px] text-wtech-blue"></i> WTECH
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center justify-between">
+                                <span class="badge-clean badge-indigo">
+                                    <i class="fa-solid fa-brain text-[10px] mr-1.5"></i>IA
+                                </span>
+                                <span class="text-[11px] font-mono text-slate-400">#04 Deep Tech</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">
+                                Mateus Cordeiro Queiroz
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Especialista em Inteligência Artificial, desenvolvimento de modelos neurais, agentes autônomos e machine learning aplicado.
+                            </p>
+                        </div>
+
+                        <div class="pt-2">
+                            <p class="text-[10px] uppercase font-mono tracking-wider text-slate-400 mb-2">Especialidades:</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Inteligência Artificial</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Modelos Preditivos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-[11px] text-slate-400 font-mono">WTECH Squad</span>
+                        <div class="flex space-x-2">
+                            <a href="https://wa.me/5511999999999?text=Olá,%20Mateus%20Cordeiro%20Queiroz!%20Vim%20pelo%20site%20da%20WTECH."
+                                target="_blank" class="social-clean-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp text-emerald-600"></i></a>
+                            <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20Mateus%20Cordeiro%20Queiroz"
+                                class="social-clean-btn" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Miguel Figueiredo Ribeiro - TI -->
+                <div class="team-member-item team-card-clean p-6 flex flex-col justify-between" data-category="tech">
+                    <div>
+                        <div class="photo-slot mb-5">
+                            <img src="assets/img/team/miguel-figueiredo-ribeiro.svg"
+                                alt="Miguel Figueiredo Ribeiro - TI WTECH">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-camera text-[10px] text-wtech-blue"></i> Foto
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center justify-between">
+                                <span class="badge-clean badge-blue">
+                                    <i class="fa-solid fa-terminal text-[10px] mr-1.5"></i>TI
+                                </span>
+                                <span class="text-[11px] font-mono text-slate-400">#05 Infraestrutura</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">
+                                Miguel Figueiredo Ribeiro
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Especialista em Tecnologia da Informação, engenharia de redes estruturadas, administração de servidores e segurança.
+                            </p>
+                        </div>
+
+                        <div class="pt-2">
+                            <p class="text-[10px] uppercase font-mono tracking-wider text-slate-400 mb-2">Especialidades:</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Infraestrutura TI</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Redes &amp; Servidores</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-[11px] text-slate-400 font-mono">WTECH Squad</span>
+                        <div class="flex space-x-2">
+                            <a href="https://wa.me/5511999999999?text=Olá,%20Miguel%20Figueiredo%20Ribeiro!%20Vim%20pelo%20site%20da%20WTECH."
+                                target="_blank" class="social-clean-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp text-emerald-600"></i></a>
+                            <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20Miguel%20Figueiredo%20Ribeiro"
+                                class="social-clean-btn" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. João Vitor Macedo - Gerente de Materiais -->
+                <div class="team-member-item team-card-clean p-6 flex flex-col justify-between" data-category="management">
+                    <div>
+                        <div class="photo-slot mb-5">
+                            <img src="assets/img/team/joao-vitor-macedo.jpg"
+                                alt="João Vitor Macedo - Gerente de Materiais WTECH" class="img-focus-face">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-check text-[10px] text-wtech-blue"></i> WTECH
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center justify-between">
+                                <span class="badge-clean badge-blue">
+                                    <i class="fa-solid fa-boxes-stacked text-[10px] mr-1.5"></i>Gerente de Materiais
+                                </span>
+                                <span class="text-[11px] font-mono text-slate-400">#06 Suprimentos</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">
+                                João Vitor Macedo
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Gestão e suprimento de componentes, homologação de peças técnicas, logística de hardware e garantia oficial.
+                            </p>
+                        </div>
+
+                        <div class="pt-2">
+                            <p class="text-[10px] uppercase font-mono tracking-wider text-slate-400 mb-2">Especialidades:</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Gestão de Materiais</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Hardware Homologado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-[11px] text-slate-400 font-mono">WTECH Squad</span>
+                        <div class="flex space-x-2">
+                            <a href="https://wa.me/5511999999999?text=Olá,%20João%20Vitor%20Macedo!%20Vim%20pelo%20site%20da%20WTECH."
+                                target="_blank" class="social-clean-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp text-emerald-600"></i></a>
+                            <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20João%20Vitor%20Macedo"
+                                class="social-clean-btn" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Bernardo Silva Garajau - Gerente de Projetos -->
+                <div class="team-member-item team-card-clean p-6 flex flex-col justify-between" data-category="leadership">
+                    <div>
+                        <div class="photo-slot mb-5">
+                            <img src="assets/img/team/bernardo-silva-garajau.jpg"
+                                alt="Bernardo Silva Garajau - Gerente de Projetos WTECH" class="img-focus-face">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-check text-[10px] text-wtech-blue"></i> WTECH
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center justify-between">
+                                <span class="badge-clean badge-emerald">
+                                    <i class="fa-solid fa-diagram-project text-[10px] mr-1.5"></i>Gerente de Projetos
+                                </span>
+                                <span class="text-[11px] font-mono text-slate-400">#07 Projetos</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">
+                                Bernardo Silva Garajau
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Coordenação de sprints ágeis, cronogramas de entrega, controle de escopo e garantia de pontualidade.
+                            </p>
+                        </div>
+
+                        <div class="pt-2">
+                            <p class="text-[10px] uppercase font-mono tracking-wider text-slate-400 mb-2">Especialidades:</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Metodologias Ágeis</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Scrum / Kanban</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-[11px] text-slate-400 font-mono">WTECH Squad</span>
+                        <div class="flex space-x-2">
+                            <a href="https://wa.me/5511999999999?text=Olá,%20Bernardo%20Silva%20Garajau!%20Vim%20pelo%20site%20da%20WTECH."
+                                target="_blank" class="social-clean-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp text-emerald-600"></i></a>
+                            <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20Bernardo%20Silva%20Garajau"
+                                class="social-clean-btn" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Caio Matos Miranda - Colaborador -->
+                <div class="team-member-item team-card-clean p-6 flex flex-col justify-between" data-category="tech">
+                    <div>
+                        <div class="photo-slot mb-5">
+                            <img src="assets/img/team/caio-matos-miranda.jpg"
+                                alt="Caio Matos Miranda - Colaborador WTECH" class="img-focus-top">
+                            <span class="photo-badge-upload">
+                                <i class="fa-solid fa-check text-[10px] text-wtech-blue"></i> WTECH
+                            </span>
+                        </div>
+
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center justify-between">
+                                <span class="badge-clean badge-blue">
+                                    <i class="fa-solid fa-user-gear text-[10px] mr-1.5"></i>Colaborador
+                                </span>
+                                <span class="text-[11px] font-mono text-slate-400">#08 Operações</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">
+                                Caio Matos Miranda
+                            </h3>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Atuação no suporte operacional, execução das rotinas técnicas, montagem e teste de bancada de equipamentos.
+                            </p>
+                        </div>
+
+                        <div class="pt-2">
+                            <p class="text-[10px] uppercase font-mono tracking-wider text-slate-400 mb-2">Especialidades:</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Suporte Técnico</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] bg-slate-100 text-slate-700 border border-slate-200">Testes em Bancada</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+                        <span class="text-[11px] text-slate-400 font-mono">WTECH Squad</span>
+                        <div class="flex space-x-2">
+                            <a href="https://wa.me/5511999999999?text=Olá,%20Caio%20Matos%20Miranda!%20Vim%20pelo%20site%20da%20WTECH."
+                                target="_blank" class="social-clean-btn" title="WhatsApp"><i class="fa-brands fa-whatsapp text-emerald-600"></i></a>
+                            <a href="mailto:contato@wtech.com.br?subject=Contato%20com%20Caio%20Matos%20Miranda"
+                                class="social-clean-btn" title="E-mail"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-slate-900 text-slate-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <img src="assets/img/logo-transparent.png" alt="WTECH" class="h-8 w-auto brightness-200">
+                <span class="text-xs">&copy; 2026 WTECH. Todos os direitos reservados.</span>
+            </div>
+            <div class="flex items-center space-x-6 text-xs text-slate-300">
+                <a href="index.html" class="hover:text-white">Início</a>
+                <a href="sobre.html" class="hover:text-white">Sobre</a>
+                <a href="servicos.html" class="hover:text-white">Serviços</a>
+                <a href="equipe.html" class="text-wtech-blue font-semibold">Equipe</a>
+                <a href="contato.html" class="hover:text-white">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

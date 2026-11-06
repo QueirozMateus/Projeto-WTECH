@@ -1,0 +1,310 @@
+/* ==========================================================================
+   WTECH - Identidade Corporativa Neutra & Azul Tecnológico (#0B61AC)
+   Design System Limpo, Profissional e Moderno
+   ========================================================================== */
+
+:root {
+    /* Cores Primárias da Marca WTECH (baseadas no logotipo oficial) */
+    --wtech-blue: #0B61AC;
+    --wtech-blue-dark: #084984;
+    --wtech-blue-hover: #095394;
+    --wtech-blue-light: #EAF3FA;
+    --wtech-blue-border: #B9D7F2;
+
+    /* Tons Neutros e Superfícies Limpas */
+    --bg-main: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --bg-card-muted: #F1F5F9;
+    --border-light: #E2E8F0;
+    --border-hover: #CBD5E1;
+
+    /* Tipografia de Alto Contraste */
+    --text-heading: #0F172A;
+    --text-body: #334155;
+    --text-muted: #64748B;
+    --text-inverted: #FFFFFF;
+
+    /* Destaques Suaves */
+    --accent-emerald: #059669;
+    --accent-indigo: #4F46E5;
+    --accent-amber: #D97706;
+
+    /* Sistema de Sombras Suaves Corporativas */
+    --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 1px 2px -1px rgba(15, 23, 42, 0.06);
+    --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+    --shadow-hover: 0 16px 32px -4px rgba(11, 97, 172, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+}
+
+/* Configurações Globais */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-body);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Navbar Corporativa Limpa */
+.navbar-clean {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-light);
+    transition: all 0.25s ease;
+}
+
+.navbar-clean.scrolled {
+    background: #FFFFFF;
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.08);
+    border-bottom-color: #CBD5E1;
+}
+
+/* Links de Navegação */
+.nav-clean-link {
+    color: #475569;
+    font-weight: 500;
+    padding: 0.5rem 0.85rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.nav-clean-link:hover {
+    color: var(--wtech-blue);
+    background-color: var(--wtech-blue-light);
+}
+
+.nav-clean-link.active {
+    color: var(--wtech-blue);
+    font-weight: 600;
+    background-color: var(--wtech-blue-light);
+}
+
+/* Botões Primários e Secundários */
+.btn-primary {
+    background-color: var(--wtech-blue);
+    color: #FFFFFF;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(11, 97, 172, 0.25);
+}
+
+.btn-primary:hover {
+    background-color: var(--wtech-blue-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(11, 97, 172, 0.35);
+}
+
+.btn-secondary {
+    background-color: #FFFFFF;
+    color: #334155;
+    font-weight: 600;
+    border: 1px solid var(--border-light);
+    border-radius: 0.75rem;
+    transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+    border-color: var(--wtech-blue);
+    color: var(--wtech-blue);
+    background-color: var(--wtech-blue-light);
+    transform: translateY(-1px);
+}
+
+/* Cards Corporativos Neutros */
+.card-clean {
+    background: #FFFFFF;
+    border: 1px solid var(--border-light);
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-clean:hover {
+    border-color: var(--wtech-blue-border);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Badges Neutros com Toque WTECH */
+.badge-clean {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.badge-blue {
+    background-color: var(--wtech-blue-light);
+    color: var(--wtech-blue);
+    border: 1px solid var(--wtech-blue-border);
+}
+
+.badge-emerald {
+    background-color: #ECFDF5;
+    color: #059669;
+    border: 1px solid #A7F3D0;
+}
+
+.badge-amber {
+    background-color: #FFFBEB;
+    color: #D97706;
+    border: 1px solid #FDE68A;
+}
+
+.badge-indigo {
+    background-color: #EEF2FF;
+    color: #4F46E5;
+    border: 1px solid #C7D2FE;
+}
+
+/* Team Card - Design Editorial & Corporativo */
+.team-card-clean {
+    background: #FFFFFF;
+    border: 1px solid var(--border-light);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.team-card-clean::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--wtech-blue);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.team-card-clean:hover {
+    transform: translateY(-6px);
+    border-color: var(--wtech-blue-border);
+    box-shadow: var(--shadow-hover);
+}
+
+.team-card-clean:hover::before {
+    opacity: 1;
+}
+
+/* Foto do Colaborador */
+.photo-slot {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-height: 250px;
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #F1F5F9;
+    border: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: transform 0.4s ease;
+}
+
+.team-card-clean:hover .photo-slot img {
+    transform: scale(1.04);
+}
+
+.img-focus-top {
+    object-position: center top !important;
+}
+
+.img-focus-face {
+    object-position: center 18% !important;
+}
+
+.photo-badge-upload {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(6px);
+    border: 1px solid var(--wtech-blue-border);
+    color: var(--wtech-blue);
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Botões Sociais Neutros */
+.social-clean-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    background: #F8FAFC;
+    color: #64748B;
+    border: 1px solid var(--border-light);
+    transition: all 0.2s ease;
+}
+
+.social-clean-btn:hover {
+    background: var(--wtech-blue-light);
+    color: var(--wtech-blue);
+    border-color: var(--wtech-blue-border);
+    transform: translateY(-2px);
+}
+
+/* Custom Scrollbar Neutro */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--wtech-blue);
+}
+
+/* Floating WhatsApp Pulse Neutro */
+@keyframes pulseWhatsApp {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+        transform: scale(1.04);
+    }
+}
+
+.whatsapp-float-btn {
+    animation: pulseWhatsApp 2.2s infinite ease-in-out;
+}

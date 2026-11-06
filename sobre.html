@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a WTECH | Nossa História, Missão e Visão</title>
+    <meta name="description"
+        content="Conheça a história da WTECH, nossa missão de impulsionar negócios através da tecnologia e inteligência artificial, e nossos valores corporativos.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wtech: {
+                            blue: '#0B61AC',
+                            dark: '#084984',
+                            hover: '#095394',
+                            light: '#EAF3FA',
+                            border: '#B9D7F2',
+                            slate: '#0F172A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Corporate Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-slate-50 text-slate-700 antialiased selection:bg-blue-100 selection:text-wtech-blue">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 navbar-clean">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <img src="assets/img/logo-transparent.png" alt="WTECH Tecnologia &amp; IA"
+                    class="h-12 w-auto object-contain group-hover:opacity-90 transition-opacity">
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-2 text-sm font-medium">
+                <a href="index.html" class="nav-clean-link">Início</a>
+                <a href="sobre.html" class="nav-clean-link active">Sobre a WTECH</a>
+                <a href="servicos.html" class="nav-clean-link">Serviços &amp; Soluções</a>
+                <a href="equipe.html" class="nav-clean-link">Nossa Equipe</a>
+                <a href="index.html#simulador" class="nav-clean-link">Simulador</a>
+                <a href="contato.html" class="nav-clean-link">Contato</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center space-x-3">
+                <a href="https://wa.me/5511999999999?text=Olá,%20WTECH!%20Gostaria%20de%20saber%20mais%20sobre%20a%20empresa."
+                    target="_blank" rel="noopener noreferrer"
+                    class="btn-primary inline-flex items-center px-5 py-2.5 text-xs sm:text-sm font-semibold">
+                    <i class="fa-brands fa-whatsapp text-base mr-2"></i>
+                    Falar com a WTECH
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-700 hover:text-wtech-blue p-2"
+                aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-200 px-6 py-5 space-y-3 shadow-lg">
+            <a href="index.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Início</a>
+            <a href="sobre.html" class="block py-2 text-wtech-blue font-semibold border-l-2 border-wtech-blue pl-3">Sobre a WTECH</a>
+            <a href="servicos.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Serviços &amp; Soluções</a>
+            <a href="equipe.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Nossa Equipe</a>
+            <a href="contato.html" class="block py-2 text-slate-600 hover:text-wtech-blue pl-3">Contato</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-14 md:pt-40 md:pb-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="badge-blue text-xs font-semibold mb-4">CONHEÇA A WTECH</span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mt-2">
+                Pessoas e Tecnologia em <span class="text-wtech-blue">Sintonia Perfeita</span>
+            </h1>
+            <p class="text-slate-600 text-sm sm:text-base max-w-2xl mx-auto mt-4 leading-relaxed">
+                Nascemos para conectar inteligência artificial, redes de alto desempenho e governança ágil em um ecossistema sólido e transparente.
+            </p>
+        </div>
+    </section>
+
+    <!-- MISSION, VISION, VALUES -->
+    <section class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Missão -->
+                <div class="card-clean p-8 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-wtech-blue flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Nossa Missão</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Entregar soluções corporativas de excelência em tecnologia e Inteligência Artificial, assegurando previsibilidade de custos, agilidade de implantação e segurança para cada cliente.
+                    </p>
+                </div>
+
+                <!-- Visão -->
+                <div class="card-clean p-8 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-wtech-blue flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Nossa Visão</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Consolidar a WTECH como a squad mais confiável e completa em inovação de TI, integrando automação inteligente e redes estruturadas com relacionamento humano de alto padrão.
+                    </p>
+                </div>
+
+                <!-- Valores -->
+                <div class="card-clean p-8 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-50 text-wtech-blue flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Nossos Valores</h3>
+                    <ul class="text-xs sm:text-sm text-slate-600 space-y-2">
+                        <li class="flex items-center"><i class="fa-solid fa-check text-wtech-blue mr-2"></i> Ética, transparência e compromisso</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-wtech-blue mr-2"></i> Rigor técnico e materiais homologados</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-wtech-blue mr-2"></i> Comunicação clara e contínua</li>
+                        <li class="flex items-center"><i class="fa-solid fa-check text-wtech-blue mr-2"></i> Foco no sucesso real do cliente</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-slate-900 text-slate-400 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <img src="assets/img/logo-transparent.png" alt="WTECH" class="h-8 w-auto brightness-200">
+                <span class="text-xs">&copy; 2026 WTECH. Todos os direitos reservados.</span>
+            </div>
+            <div class="flex items-center space-x-6 text-xs text-slate-300">
+                <a href="index.html" class="hover:text-white">Início</a>
+                <a href="sobre.html" class="text-wtech-blue font-semibold">Sobre</a>
+                <a href="servicos.html" class="hover:text-white">Serviços</a>
+                <a href="equipe.html" class="hover:text-white">Equipe</a>
+                <a href="contato.html" class="hover:text-white">Contato</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

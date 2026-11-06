@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | WTECH - Fale com Nossa Equipe Especializada</title>
+    <meta name="description"
+        content="Entre em contato com a WTECH. Nossa liderança e especialistas em TI e IA estão prontos para atender suas demandas com agilidade.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            bg: '#0B0F19',
+                            dark: '#070A10',
+                            card: 'rgba(17, 24, 39, 0.75)',
+                            border: 'rgba(0, 210, 255, 0.2)',
+                            blue: '#00D2FF',
+                            cyan: '#3A7BD5',
+                            neon: '#00FF88',
+                            purple: '#8B5CF6',
+                            pink: '#EC4899',
+                            amber: '#F59E0B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS Modular Stylesheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="relative min-h-screen text-slate-200 selection:bg-cyber-blue selection:text-cyber-dark">
+
+    <canvas id="hero-canvas"></canvas>
+
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="h-11 flex items-center">
+                    <img src="assets/img/logo.svg" alt="WTECH Logo"
+                        class="h-10 w-auto group-hover:scale-105 transition-transform duration-300">
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-7 text-sm font-medium">
+                <a href="index.html" class="nav-link hover:text-cyber-blue transition-colors">Início</a>
+                <a href="sobre.html" class="nav-link hover:text-cyber-blue transition-colors">Sobre</a>
+                <a href="servicos.html" class="nav-link hover:text-cyber-blue transition-colors">Serviços</a>
+                <a href="equipe.html" class="nav-link hover:text-cyber-blue transition-colors">Equipe</a>
+                <a href="index.html#calculadora" class="nav-link hover:text-cyber-blue transition-colors">Simulador</a>
+                <a href="contato.html" class="nav-link active hover:text-cyber-blue transition-colors">Contato</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center space-x-3">
+                <a href="https://wa.me/5511999999999?text=Olá,%20WTECH!%20Vim%20pela%20página%20de%20contato."
+                    target="_blank" rel="noopener noreferrer"
+                    class="relative inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-cyber-dark bg-gradient-to-r from-cyber-blue via-cyber-cyan to-cyber-neon hover:opacity-95 transition-all duration-300 shadow-lg shadow-cyber-blue/20 hover:scale-[1.02]">
+                    <i class="fa-brands fa-whatsapp text-base mr-2"></i>
+                    WhatsApp Oficial
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-cyber-blue focus:outline-none p-2"
+                aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden glass-card border-t border-cyber-border px-6 py-6 space-y-4">
+            <a href="index.html"
+                class="mobile-link block text-base font-medium text-slate-300 hover:text-cyber-blue pl-2">Início</a>
+            <a href="sobre.html"
+                class="mobile-link block text-base font-medium text-slate-300 hover:text-cyber-blue pl-2">Sobre</a>
+            <a href="servicos.html"
+                class="mobile-link block text-base font-medium text-slate-300 hover:text-cyber-blue pl-2">Serviços</a>
+            <a href="equipe.html"
+                class="mobile-link block text-base font-medium text-slate-300 hover:text-cyber-blue pl-2">Equipe</a>
+            <a href="contato.html"
+                class="mobile-link block text-base font-semibold text-cyber-blue border-l-2 border-cyber-blue pl-2">Contato</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-36 pb-12 md:pt-44 md:pb-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div
+                class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-card border border-cyber-blue/30 text-cyber-blue text-xs font-mono font-semibold mb-6">
+                <i class="fa-solid fa-headset text-sm"></i>
+                <span>CANAIS DIRETOS WTECH</span>
+            </div>
+            <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                Fale com a Nossa <br />
+                <span class="gradient-text">Equipe de Especialistas</span>
+            </h1>
+            <p class="text-slate-300 text-sm sm:text-lg max-w-2xl mx-auto mt-6 leading-relaxed">
+                Tire dúvidas técnicas, solicite uma vistoria presencial ou receba uma proposta personalizada diretamente de
+                nossa liderança e equipe técnica.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTACT DETAILS & FORM -->
+    <section class="py-12 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+                <!-- Info Cards (Col 5) -->
+                <div class="lg:col-span-5 space-y-6">
+
+                    <div class="glass-card p-6 rounded-2xl border border-cyber-blue/30 flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-cyber-blue/15 text-cyber-blue flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-base">WhatsApp Comercial &amp; Técnico</h4>
+                            <p class="text-xs text-slate-400 mt-1">Atendimento imediato para dúvidas e novos orçamentos.</p>
+                            <a href="https://wa.me/5511999999999?text=Olá,%20WTECH!%20Gostaria%20de%20um%20atendimento."
+                                target="_blank"
+                                class="inline-flex items-center text-cyber-blue hover:text-cyber-neon font-semibold text-xs mt-2 transition-colors">
+                                Iniciar conversa agora <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-cyber-neon/30 flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-cyber-neon/15 text-cyber-neon flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-base">E-mail Institucional</h4>
+                            <p class="text-xs text-slate-400 mt-1">Envie propostas, editais e solicitações corporativas.</p>
+                            <a href="mailto:contato@wtech.com.br"
+                                class="inline-flex items-center text-cyber-neon hover:text-white font-semibold text-xs mt-2 transition-colors">
+                                contato@wtech.com.br <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-purple-500/30 flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-base">Horário de Funcionamento</h4>
+                            <p class="text-xs text-slate-400 mt-1">Segunda a Sexta: 08:00 às 18:30</p>
+                            <p class="text-xs text-slate-400">Sábado: 08:00 às 13:00 | Plantão de Suporte 24/7</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border border-amber-500/30 flex items-start space-x-4">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-base">Região de Atendimento</h4>
+                            <p class="text-xs text-slate-400 mt-1">Atendimento presencial para projetos e infraestrutura, e consultoria remota de IA para todo o Brasil.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Form (Col 7) -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card p-8 sm:p-10 rounded-3xl border border-cyber-border">
+                        <div class="mb-6 space-y-2">
+                            <h3 class="text-2xl font-bold text-white">Formulário de Contato Rápido</h3>
+                            <p class="text-xs text-slate-400">Preencha os campos abaixo para direcionarmos ao especialista certo.</p>
+                        </div>
+
+                        <form id="contact-page-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Seu Nome Completo *</label>
+                                <input type="text" id="contact-name" required placeholder="Ex: Roberto Ramos"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyber-blue text-sm">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">E-mail Corporativo *</label>
+                                    <input type="email" id="contact-email" required placeholder="roberto@empresa.com"
+                                        class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyber-blue text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">WhatsApp / Telefone *</label>
+                                    <input type="tel" id="contact-phone" required placeholder="(11) 99999-9999"
+                                        class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyber-blue text-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Direcionar para Área:</label>
+                                <select id="contact-subject"
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white focus:outline-none focus:border-cyber-blue text-sm">
+                                    <option value="Inteligência Artificial e Automação (Mateus Queiroz)">Inteligência Artificial &amp; Automação (Mateus Queiroz)</option>
+                                    <option value="Redes e Infraestrutura de TI (Miguel Ribeiro)">Redes &amp; Infraestrutura de TI (Miguel Ribeiro)</option>
+                                    <option value="Materiais e Hardware Homologado (João Macedo)">Materiais &amp; Hardware Homologado (João Macedo)</option>
+                                    <option value="Gestão de Projetos e Escopo (Bernardo Garajau)">Gestão de Projetos &amp; Escopo (Bernardo Garajau)</option>
+                                    <option value="Liderança e Parcerias (Hugo Rocha / Júlia Periard)">Liderança &amp; Parcerias (Hugo Rocha / Júlia Periard)</option>
+                                    <option value="Comunicação e Imprensa (Matheus Salomé)">Comunicação &amp; Imprensa (Matheus Salomé)</option>
+                                    <option value="Suporte Técnico Geral (Caio Miranda)">Suporte Técnico Geral (Caio Miranda)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold uppercase text-slate-300 mb-2">Detalhes da Sua Demanda *</label>
+                                <textarea id="contact-msg" rows="5" required
+                                    placeholder="Conte-nos sobre a infraestrutura atual da sua empresa e o que você busca alcançar..."
+                                    class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyber-blue text-sm"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full py-4 rounded-xl font-bold text-sm text-cyber-dark bg-gradient-to-r from-cyber-blue via-cyber-cyan to-cyber-neon hover:opacity-95 transition-all shadow-lg shadow-cyber-blue/20">
+                                <i class="fa-paper-plane fa-solid mr-2"></i> Transmitir Mensagem via WhatsApp Oficial
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 relative z-10 bg-cyber-dark/95 border-t border-cyber-border/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <img src="assets/img/logo.svg" alt="WTECH" class="h-7 w-auto">
+            </div>
+            <div class="flex items-center space-x-6 text-xs text-slate-400">
+                <a href="index.html" class="hover:text-cyber-blue">Início</a>
+                <a href="sobre.html" class="hover:text-cyber-blue">Sobre</a>
+                <a href="servicos.html" class="hover:text-cyber-blue">Serviços</a>
+                <a href="equipe.html" class="hover:text-cyber-blue">Equipe</a>
+                <a href="contato.html" class="text-cyber-blue font-semibold">Contato</a>
+            </div>
+            <p class="text-xs text-slate-500">&copy; 2026 WTECH. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+
